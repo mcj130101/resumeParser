@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-const downloadURL = "http://127.0.0.1:5000/download";
+const downloadURL = "https://flask-backend-wilc.onrender.com/download";
 const ResumeUpload = () => {
   const [selectedFiles, setSelectedFiles] = useState([]);
   const [isDownloadable, setIsDownloadable] = useState(false);
@@ -44,7 +44,7 @@ const ResumeUpload = () => {
 
     try {
       const response = await axios.post(
-        "http://127.0.0.1:5000/upload",
+        "https://flask-backend-wilc.onrender.com/upload",
         formData,
         {
           headers: {
